@@ -1,0 +1,139 @@
+{\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1033\deflangfe1033{\fonttbl{\f0\fmodern\fprq1\fcharset0 Courier New;}{\f1\fnil\fcharset2 Symbol;}}
+{\colortbl ;\red0\green0\blue255;}
+{\*\listtable 
+{\list\listhybrid
+{\listlevel\levelnfc23\leveljc0\levelstartat1{\leveltext\'01\'B7;}{\levelnumbers;}\f1\jclisttab\tx0}
+{\listlevel\levelnfc23\leveljc0\levelstartat1{\leveltext\'01\'B7;}{\levelnumbers;}\f1\jclisttab\tx0}\listid1 }
+{\list\listhybrid
+{\listlevel\levelnfc23\leveljc0\levelstartat1{\leveltext\'01\'B7;}{\levelnumbers;}\f1\jclisttab\tx0}
+{\listlevel\levelnfc23\leveljc0\levelstartat1{\leveltext\'01\'B7;}{\levelnumbers;}\f1\jclisttab\tx0}\listid2 }
+{\list\listhybrid
+{\listlevel\levelnfc23\leveljc0\levelstartat1{\leveltext\'01\'B7;}{\levelnumbers;}\f1\jclisttab\tx0}
+{\listlevel\levelnfc23\leveljc0\levelstartat1{\leveltext\'01\'B7;}{\levelnumbers;}\f1\jclisttab\tx0}\listid3 }}
+{\*\listoverridetable{\listoverride\listid1\listoverridecount0\ls1}{\listoverride\listid2\listoverridecount0\ls2}{\listoverride\listid3\listoverridecount0\ls3}}
+{\*\generator Riched20 10.0.10240}{\*\mmathPr\mdispDef1\mwrapIndent1440 }\viewkind4\uc1 
+\pard\widctlpar\b\f0\fs21 Release Notes for Trackable Entities v 2.5.2.1\par
+\par
+\b0 Updated release notes for v 2.5.2.1 can be found here:\line {{\field{\*\fldinst{HYPERLINK https://github.com/tonysneed/trackable-entities/releases/tag/v2.5.2.1 }}{\fldrslt{https://github.com/tonysneed/trackable-entities/releases/tag/v2.5.2.1\ul0\cf0}}}}\b\f0\fs21\par
+\par
+1. Visual Studio Project Templates.\b0\par
+\par
+
+\pard{\pntext\f1\'B7\tab}{\*\pn\pnlvlblt\pnf1\pnindent0{\pntxtb\'B7}}\fi-360\li720 Fixed an issue with the Entities project template wizard which placed the generated project directory one level too high.\par
+{\pntext\f1\'B7\tab}Removed packages.config from all VS project templates to accommodate a change in behavior of the NuGet VS Wizard, which now required packages.config to be omitted.\par
+
+\pard\widctlpar\b\par
+2. VSIX Installer for VS2015.\b0\par
+\par
+
+\pard{\pntext\f1\'B7\tab}{\*\pn\pnlvlblt\pnf1\pnindent0{\pntxtb\'B7}}\fi-360\li720 Corrected problems with \ul WCF template\ulnone  for VS 2013 to set default namespace in client and service entities projects to match\par
+
+\pard\widctlpar\b\par
+Release Notes for Trackable Entities v 2.5.2\par
+\par
+\b0 Updated release notes for v 2.5.2 can be found here:\line {{\field{\*\fldinst{HYPERLINK https://github.com/tonysneed/trackable-entities/releases/tag/v2.5.2 }}{\fldrslt{https://github.com/tonysneed/trackable-entities/releases/tag/v2.5.2\ul0\cf0}}}}\b\f0\fs21\par
+\par
+1. Trackable Entities NuGet packages v 2.5.2.\b0\par
+\par
+
+\pard{\pntext\f1\'B7\tab}{\*\pn\pnlvlblt\pnf1\pnindent0{\pntxtb\'B7}}\fi-360\li720 Fixed \ul ApplyChanges\ulnone  to include check for 0/1-M relations in cascade Adds.\par
+{\pntext\f1\'B7\tab}Fixed \ul Remove\ulnone  and \ul SetTracking\ulnone  method so that change-tracking is only disabled on deletes for 1-M relations.\par
+
+\pard\widctlpar\b\par
+2. VSIX installer for VS2013.\b0\par
+\par
+
+\pard{\pntext\f1\'B7\tab}{\*\pn\pnlvlblt\pnf1\pnindent0{\pntxtb\'B7}}\fi-360\li720 Updated WCF service entities project to use T4 templates for shared entities.\par
+{\pntext\f1\'B7\tab}Updated NuGet packages for Trackable Entities in project templates and installer.\par
+{\pntext\f1\'B7\tab}Corrected folder structure for TrackableEntities.Common NuGet package v2.5.2.1, and updated templates to use it.\par
+
+\pard\widctlpar\b\par
+Release Notes for Trackable Entities v 2.5.1\par
+\par
+\b0 Updated release notes for v 2.5.1 can be found here:\line {{\field{\*\fldinst{HYPERLINK https://github.com/tonysneed/trackable-entities/releases/tag/v2.5.1 }}{\fldrslt{https://github.com/tonysneed/trackable-entities/releases/tag/v2.5.1\ul0\cf0}}}}\f0\fs21\par
+\par
+\b 1. Miscellaneous bug fixes.\b0\par
+\par
+
+\pard{\pntext\f1\'B7\tab}{\*\pn\pnlvlblt\pnf1\pnindent0{\pntxtb\'B7}}\fi-360\li720 Fixed bugs in MergeChanges and ApplyChanges methods.\par
+
+\pard\widctlpar\par
+\b Release Notes for Trackable Entities v 2.5\par
+\par
+\b0 Updated release notes for v 2.5 can be found here:\line {{\field{\*\fldinst{HYPERLINK https://github.com/tonysneed/trackable-entities/releases/tag/v2.5.0 }}{\fldrslt{https://github.com/tonysneed/trackable-entities/releases/tag/v2.5.0\ul0\cf0}}}}\b\f0\fs21\par
+\par
+1. Trackable Entities NuGet packages v 2.5.\b0\par
+\par
+
+\pard 
+{\listtext\f0\u10625?\tab}\ls1\fi-360\li720 New \ul EntityBase\ulnone  class for trackable entities.\par
+
+\pard 
+{\listtext\f0\u10625?\tab}\ls1\ilvl1\fi-360\li1440 Improved implementation of INotifyPropertyChanged: Allows parameterless version of NotifyPropertyChanged (.Net 4.5).\par
+{\listtext\f0 1\tab}Implements interfaces needed for change tracking and merging.\par
+{\listtext\f0 2\tab}EntityBase is non-generic in order to support inheritance.\par
+{\listtext\f0 3\tab}ModelBase<T> has been deprecated and marked as obsolete.\par
+
+\pard 
+{\listtext\f0\u10625?\tab}\ls1\fi-360\li720 Support for \ul inheritance\ulnone .\par
+
+\pard 
+{\listtext\f0\u10625?\tab}\ls1\ilvl1\fi-360\li1440 Trackable entity classes can now derive from other entities.\par
+{\listtext\f0 1\tab}Client and service libraries both support inheritance.\par
+
+\pard 
+{\listtext\f0\u10625?\tab}\ls1\fi-360\li720 Compatibility has been enabled for \ul Windows Phone 8.1\ulnone .\par
+{\listtext\f0 1\tab}Minor bug fixes.\par
+
+\pard\widctlpar\li720\par
+
+\pard\widctlpar\b 2. Updated code generation templates.\b0\par
+\par
+
+\pard 
+{\listtext\f0\u10625?\tab}\ls2\fi-360\li720 T4 templates now use EntityBase instead of ModelBase.\par
+{\listtext\f0 1\tab}Json and DataContract serialization attributes have been removed.\par
+
+\pard 
+{\listtext\f0\u10625?\tab}\ls2\ilvl1\fi-360\li1440 Project templates include packages and code to configure Json and DataContract serializers to handle cyclical references.\par
+
+\pard 
+{\listtext\f0\u10625?\tab}\ls2\fi-360\li720 T4 templates are now deployed as NuGet packages.\par
+
+\pard 
+{\listtext\f0\u10625?\tab}\ls2\ilvl1\fi-360\li1440 EF Power Tools and EF 6.x Tools for Visual Studio are both supported.\par
+{\listtext\f0 1\tab}Versions for separate client and service entities, shared entities, with portable and .Net 4.5 targets.\par
+
+\pard 
+{\listtext\f0\u10625?\tab}\ls2\fi-360\li720 T4 templates support both the Entity Framework Power Tools and the Entity Framework 6.x Tools for Visual Studio.\par
+
+\pard\widctlpar\par
+\b 3. Project templates for Shared Entities between client and service.\b0\par
+\par
+
+\pard 
+{\listtext\f0\u10625?\tab}\ls3\fi-360\li720 Project templates for Visual Studio 2013 and later now offer an option to create \ul shared entities\ulnone  in a single project that is referenced both by client and service projects.\par
+
+\pard 
+{\listtext\f0\u10625?\tab}\ls3\ilvl1\fi-360\li1440 A Shared Entities template has been added for \ul EDMX-based\ulnone  models.\par
+{\listtext\f0 1\tab}Visual Studio 2012 projects may be manually updated by installing a code generation NuGet package and re-generating entities which derive from EntityBase.\par
+
+\pard 
+{\listtext\f0\u10625?\tab}\ls3\fi-360\li720 When creating a Trackable Entities project, a \ul wizard\ulnone  will prompt for an entity format selection:\par
+
+\pard 
+{\listtext\f0\u10625?\tab}\ls3\ilvl1\fi-360\li1440 Separate Client / Service Entities vs Shared Entities\par
+{\listtext\f0 1\tab}Portable vs .Net 4.5 Target\par
+
+\pard 
+{\listtext\f0\u10625?\tab}\ls3\fi-360\li720 Individual entities projects may be added to a solution, or a multi-project solution may be selected (WCF, Web API, Web API with Repo and Unit of Work Patterns).\par
+
+\pard 
+{\listtext\f0\u10625?\tab}\ls3\ilvl1\fi-360\li1440 For convenience all service projects include the TrackableEntities.Client NuGet package to support shared entities, but you may wish to remove it if you are using separate client and service entities.\par
+
+\pard 
+{\listtext\f0\u10625?\tab}\ls3\fi-360\li720 Shared entities allow WCF clients to use "\ul Add Service Reference\ulnone " instead of a client channel factory.\par
+
+\pard\widctlpar\b\par
+}
+ 

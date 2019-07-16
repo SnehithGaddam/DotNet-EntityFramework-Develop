@@ -1,0 +1,64 @@
+Web API Relations Sample ReadMe
+
+This sample demonstrates how to update 1-1, M-1 and M-M relations 
+using Trackable Entities.
+
+NOTE: You should first install the Entity Framework Power Tools.
+Support for EF 6.1 Tools for Visual Studio has also be added,
+so that you can add an "ADO.NET Entity Data Model" to the
+Service.Entities project. However, because the EF Power Tools
+are not compatible with Portable Class Libraries, you can either
+use the EF Power Tools to generate client entities, or copy
+the Code Tempaltes folder to a .NET 4.5 Class Library project
+and generate model classes there, then copy or link them to the
+Client.Entities project.
+
+These steps use a scaled down version of the Northwind database, 
+which you can get here: http://bit.ly/northwindslim.
+
+By default LocalDb is used and the NorthwindSlim databased is
+created and seeded with a small amount of data when you first
+run the WebApi service. Optionally, you can use SQL Express (or
+another edition), create NorthwindSlim manually and run the
+SQL script in the Data folder to create and populate the tables.
+
+Before starting the client Console app, build the solution, then
+right-click on the Web Api project and select View in Browser.
+This will start the service using the development web server.
+
+To replicate this sample follow these steps Program.Main of the ConsoleClient project:
+
+Part A: One-to-One Relations
+
+1. Add a new setting to a customer.
+   - Adding a new setting requires that you manually mark it as Added
+
+2. Modify a property on the customer's setting.
+   - The setting will automatically be marked as Modified
+
+3. Remove the customer's setting.
+   - Removing a new setting requires that you manually mark it as Deleted
+
+Part B: Many-to-One Relations
+
+1. Add a new customer to an existing order
+   - Manually marking the customer as Added will result in a NEW customer
+     being added to the database.
+   - To add an existing customer, simply set the Order.CustomerId foreign key property
+ 
+2. Modify a property on the order customer
+   - Order.Customer is automatically change-tracked, so updating the CompanyName
+     property will mark it as Modified.
+
+Part C: Many-to-Many Relation
+
+1. Employee and Territory have a M-M relationship, so adding or removing entities from
+   either side will remove the relationship without deleting the related entity.
+   - Add an existing territory to the Employee.Territories property.
+   - Modify a property on one of the employee territories
+   - Remove one of the employee territories
+
+2. After updating the employee, merge changes back into the employee change tracker
+   - This will add inserted territories, merge in modified properties on updated
+     territories, and purge cached deleted territories
+

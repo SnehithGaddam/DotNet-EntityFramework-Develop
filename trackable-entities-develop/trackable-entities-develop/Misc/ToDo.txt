@@ -1,0 +1,136 @@
+Trackable Entities To Do
+
+Release v2.0: Apr-2014
+
+TODO:
+
+* Update Release Notes:
+  IMPORTANT: Trackable Entities currently requires the Entity Framework Power Tools.
+  Support will be added in a future release for Code First from Database with the EF 6.1 Tools.
+  
+  As of v 2.0 use of MVC scaffolding foe adding Web API controllers has been discontinued.
+  Instead you must select Add New Item and select "Entity Web API Controller"
+  
+* Update ReadMe's re: EF Power Tools dependency
+  > NOTE: TE does not yet support Code First from Database with EF 6.1 Tools
+* Replace Web API controller T4 template with Controller Item Template
+  > Remove t4 templates from WebApi samples and project templates
+  > Add new Controller Item template
+  > Update VSIX projects with new project and item templates
+  > Update ReadMe's regarding use of Controller item template
+* Update NuGet packages for Web API projects to 5.1.2 (VS 2013 Update 2)
+
+1) VSIX
+
+  > DONE: Solution ReadMe file in:
+    %ProgramFiles%\Microsoft Visual Studio 12.0\Common7\IDE\PrivateAssemblies
+
+  > DONE: Update VSIX Description:
+      Visual Studio project and item templates for quickly building n-tier applications using Entity Framework with entities that are change-tracked on the client and persisted on the server.
+
+  > DONE: Item templates org: 
+    - Trackable\Patterns, WCF folders (VS 2013 only) (rollup 2)
+
+  > DONE: Update ReadMe files
+  > TODO: Release Notes
+
+  > NO REPRO: Delete asm in item template reflection code
+  > DONE:
+    Make item template dialogs expandable with anchored controls
+    Remove EF Power Tools dependency
+    NuGet Packages
+    
+2) DONE: Updated sample for M-1, 1-1, M-M relationships
+
+3) VS2013 Update 2 RC
+   - Create system restore point
+   
+DOCS:
+- Getting Started Guides
+- Migrationg from v1.x
+  > Update Nuget packages to v2
+  > Regenerate client and service entities (via EF rev eng db command)
+  > Replace obsolete MergeChanges in client app
+  > Patterns:
+   - Move Mappings into .EF project (done)
+     > Add step in Getting Started guide
+
+DONE:
+
+1) Get sample working w v2
+   - Client using new MergeChanges API
+   - Service controllers using ApplyChanges, LoadRelatedEntities
+     > Replace Customer controller
+   - Update controller scaffolding
+     > Order: POST, PUT, DELETE
+   - Replace in all samples and vs project templates   
+   - Samples:
+     VS 2013
+     - WebApi
+     - WebApi.Patterns* - next
+     - Wcf
+     VS 2012
+     - WebApi
+     - Wcf
+
+2) Update Patterns and WCF samples
+   - Operations use ApplyChanges, LoadRelatedEntities
+   - Update project templates   
+   - Replace in all samples and vs project templates
+   
+* DONE: Overload for async methods accepting cancellation token
+* DONE: Refactor LoadRelatedEntities
+  - condition: if state == added load entity
+   
+- api controller t4
+  > all samples
+  > vs project templates
+- Repository.cs -> Fix Delete + Async
+- WebApi.Patterns
+  > Sample
+  > vs project templates
+  
+- NorthwindSlim:
+  > Script new tables and data
+  > Include with Samples
+  > Post to ts.com
+
+- CT Coll:
+  > Rename T to TEntity
+  > Throw exception if entity is not IEquatable<TEntity>
+    - MergeChanges
+  > Add xml doc for Arg Exception on MergeChanges
+
+- Client T4 templates
+  > M-M prop setter: if (value != null) value.Parent = this;
+  > Add M-1 ref props, change tracker
+  > Add 1-1 change tracker prop
+  > Explicitly implement IEquatable<T>
+    - Make private EntityIdentifer serializable
+      - Json, DataContract
+  > Replace == with value.Equals
+    - Use ReferenceEquals for ref props
+  > Replicate to all samples and vs project templates
+
+- Server T4 templates
+  > Mapping.tt: using System.ComponentModel.DataAnnotations.Schema;
+  > Add private EntityIdentifer
+    - Make serializable for Json, DataContract
+  > Replicate to all samples and vs project templates
+
+Release 2.1:
+
+- Create integration tests with SpecFlow
+  > Test T4 templates
+  > Test Serialization, Equatability
+  > Test LoadRelatedEntities
+  > Test MergeChanges
+  
+Testing data:
+
+unchanged terr id:      "01581"
+modified terr id:       "01730" c
+added existing terr id: "02116" c
+added new terr id:      "91360" c
+deleted terr id:        "01833" c
+
